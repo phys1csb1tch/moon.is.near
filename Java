@@ -1,0 +1,3 @@
+PT: Este repositório contém a minha resolução de alguns dos exercícios propostos no curso Técnico em Desenvolvimento de Sistemas oferecido pelo SENAC-RS.
+
+ENG: This repository holds my solutions to some of the tests proposed by the coding certification program at the institution SENAC-RS (Brazil).
