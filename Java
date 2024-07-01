@@ -1,3 +1,46 @@
-PT: Este repositório contém a minha resolução de alguns dos exercícios propostos no curso Técnico em Desenvolvimento de Sistemas oferecido pelo SENAC-RS.
+package Atv5;
 
-ENG: This repository holds my solutions to some of the tests proposed by the coding certification program at the institution SENAC-RS (Brazil).
+import java.util.Scanner;
+
+public class Atv5 {
+    public static void main(String[] args){
+    Scanner input = new Scanner (System.in, "latin1");
+
+    // define todos os quartos vazios a priori
+    String [][] apartamentos = new String[4][3];
+        for(int row=0; row<4; row++){
+            for (int col=0; col<3 ; col++){
+                apartamentos[row][col]="O";
+            }
+        }
+        
+            String controle = "S";
+
+        do{
+            
+            System.out.println("Este prorgama registra a ocupação dos quartos.");
+            System.out.println("Informe o andar que deseja ocupar:");
+            int andar = input.nextInt();
+            System.out.println("Informe o numero do quarto:");
+            int quarto = input.nextInt();
+            apartamentos[andar-1][quarto-1]="X";
+
+            System.out.println("Deseja registrar nova ocupação?");
+            System.out.println("S - Sim, N - Não");
+
+            controle=input.next();
+
+        }while(controle.equals("S"));
+        
+        //mostra ocupação dos apartamentos
+        for(int row=0; row<4; row++){
+            for (int col=0; col<3 ; col++){
+                System.out.println("apartamento "+(row+1)+(col+1)+" "+apartamentos[row][col]+"\t");
+            }
+        System.out.println();
+        }
+
+    input.close();
+}
+
+}
